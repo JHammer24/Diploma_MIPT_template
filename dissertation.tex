@@ -38,6 +38,8 @@
 
 \begin{document}
 
+\input{common/renames}                 % Переопределение именований
+
 %% Структура диссертации (ГОСТ Р 7.0.11-2011, 4)
 \include{dissertation/title}           % Титульный лист
 \include{dissertation/contents}        % Оглавление
@@ -47,14 +49,5 @@
 \include{dissertation/conclusion}      % Заключение
 %\include{dissertation/acronyms}        % Список сокращений и условных обозначений
 \include{dissertation/references}      % Список литературы
-
-%%% Настройки для приложений
-\appendix
-% Оформление заголовков приложений ближе к ГОСТ:
-\setlength{\midchapskip}{20pt}
-\renewcommand*{\afterchapternum}{\par\nobreak\vskip \midchapskip}
-\renewcommand\thechapter{\Asbuk{chapter}} % Чтобы приложения русскими буквами нумеровались
-
-\include{dissertation/appendix}        % Приложения
 
 \end{document}

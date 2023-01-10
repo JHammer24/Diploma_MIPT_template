@@ -3,5 +3,3 @@ presentation.*
 dissertation.*
 !dissertation.tex
 *.aux
-*.pygtex
-*.pygstyle
