@@ -11,6 +11,7 @@ del /s *.log
 del /s *.lof
 del /s *.lot
 del /s *.nav
+del /s *.nlo
 del /s *.out
 del /s *.run.xml
 del /s *.snm
