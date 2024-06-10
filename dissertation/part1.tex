@@ -7,64 +7,26 @@
 \section{Ссылки}\label{sec:ch1/sec2}
 
 Сошлёмся на библиографию.
-Одна ссылка: \cite[с.~54]{Sokolov}\cite[с.~36]{Gaidaenko}.
-Две ссылки: \cite{Sokolov,Gaidaenko}.
-Ссылка на собственные работы: \cite{vakbib1, confbib2}.
-Много ссылок: %\cite[с.~54]{Lermontov,Management,Borozda} % такой «фокус»
-%вызывает biblatex warning относительно опции sortcites, потому что неясно, к
-%какому источнику относится уточнение о страницах, а bibtex об этой проблеме
-%даже не предупреждает
-\cite{Lermontov, Management, Borozda, Marketing, Constitution, FamilyCode,
-    Gost.7.0.53, Razumovski, Lagkueva, Pokrovski, Methodology, Berestova,
-    Kriger}%
-\cite{Sirotko2, Lukina2, Encyclopedia2, Nasirova2}.
-И~ещё немного ссылок:~\cite{Article,Book,Booklet,Conference,Inbook,Incollection,Manual,Mastersthesis,
-    Misc,Phdthesis,Proceedings,Techreport,Unpublished}
-% Следует обратить внимание, что пробел после запятой внутри \cite{}
-% обрабатывается ожидаемо, а пробел перед запятой, может вызывать проблемы при
-% обработке ссылок.
-\cite{medvedev2006jelektronnye, CEAT:CEAT581, doi:10.1080/01932691.2010.513279,
-    Gosele1999161,Li2007StressAnalysis, Shoji199895, test:eisner-sample,
-    test:eisner-sample-shorted, AB_patent_Pomerantz_1968, iofis_patent1960}%
-\cite{patent2h, patent3h, patent2}.
+Одна ссылка: \cite[с.~54]{Sokolov}.
+Две ссылки: \cite{Sokolov, Gaidaenko}.
+Много ссылок: \cite{Gost.7.0.53, Razumovski, Lagkueva, Pokrovski, Methodology, Berestova, Kriger},
+\cite{Sirotko, Lukina, Encyclopedia, Nasirova}.
+И~ещё немного ссылок:~\cite{Article,Book,Booklet,Conference,Inbook,Incollection,Manual,Mastersthesis,Misc,Phdthesis,Proceedings,Techreport,Unpublished}.
 
-Несколько источников (мультицитата):
-% Тут специально написано по-разному тире, для демонстрации, что
-% применение специальных тире в настоящий момент в biblatex приводит к непоказу
-% "с.".
-\cites[vii--x, 5, 7]{Sokolov}[v"--~x, 25, 526]{Gaidaenko}[vii--x, 5, 7]{Techreport},
-работает только в \texttt{biblatex} реализации библиографии.
 
 Ссылки на собственные работы:~\cite{vakbib1, confbib1}.
 
-Сошлёмся на приложения: Приложение~\cref{app:A}, Приложение~\cref{app:B2}.
+%Сошлёмся на приложения: Приложение~\cref{app:A}, Приложение~\cref{app:B2}.
 
-Сошлёмся на формулу: формула~\cref{eq:equation1}.
+%Сошлёмся на формулу: формула~\cref{eq:equation1}.
 
-Сошлёмся на изображение: рисунок~\cref{fig:knuth}.
+%Сошлёмся на изображение: рисунок~\cref{fig:knuth}.
 
 Стандартной практикой является добавление к ссылкам префикса, характеризующего тип элемента.
 Это не является строгим требованием, но~позволяет лучше ориентироваться в документах большого размера.
-Например, для ссылок на~рисунки используется префикс \textit{fig},
-для ссылки на~таблицу "--- \textit{tab}.
+Например, для ссылок на~рисунки используется префикс \textit{fig}, для ссылки на~таблицу "--- \textit{tab}.
 
-В таблице \cref{tab:tab_pref} приложения~\cref{app:B4} приведён список рекомендуемых
-к использованию стандартных префиксов.
-
-В некоторых ситуациях возникает необходимость отойти от требований ГОСТ по оформлению ссылок на
-литературу.
-В таком случае можно воспользоваться дополнительными опциями пакета \verb+biblatex+.
-
-Например, в ссылке на книгу~\cite{sobenin_kdv} использование опции \verb+maxnames=4+ позволяет
-вывести имена всех четырёх авторов.
-По ГОСТ имена последних трёх авторов опускаются.
-
-Кроме того, часто возникают проблемы с транслитерованными инициалами. Некоторые буквы русского
-алфавита по правилам транслитерации записываются двумя буквами латинского алфавита (ю-yu, ё-yo и
-т.д.).
-Такие инициалы \verb+biblatex+ будет сокращать до одной буквы, что неверно.
-Поправить его работу можно использовав опцию \verb+giveninits=false+.
-Пример использования этой опции можно видеть в ссылке~\cite{initials}.
+%В таблице \cref{tab:tab_pref} приложения~\cref{app:B4} приведён список рекомендуемых к использованию стандартных префиксов.
 
 \section{Формулы}\label{sec:ch1/sec3}
 
@@ -466,22 +428,6 @@
         \end{tabular}
     \end{threeparttable}
 \end{table}
-
-\subsection{Заголовки с формулами: \texorpdfstring{\(a^2 + b^2 = c^2\)}{%
-        a\texttwosuperior\ + b\texttwosuperior\ = c\texttwosuperior},
-    \texorpdfstring{\(\left\vert\textrm{{Im}}\Sigma\left(
-            \protect\varepsilon\right)\right\vert\approx const\)}{|ImΣ (ε)| ≈ const},
-    \texorpdfstring{\(\sigma_{xx}^{(1)}\)}{σ\_\{xx\}\textasciicircum\{(1)\}}
-}\label{subsec:with_math}
-
-Пакет \texttt{hyperref} берёт текст для закладок в pdf-файле из~аргументов
-команд типа \verb|\section|, которые могут содержать математические формулы,
-а~также изменения цвета текста или шрифта, которые не отображаются в~закладках.
-Чтобы использование формул в заголовках не вызывало в~логе компиляции появление
-предупреждений типа <<\texttt{Token not allowed in~a~PDF string
-    (Unicode):(hyperref) removing...}>>, следует использовать конструкцию
-\verb|\texorpdfstring{}{}|, где в~первых фигурных скобках указывается
-формула, а~во~вторых "--- запись формулы для закладок.
 
 \section{Рецензирование текста}\label{sec:markup}
 
