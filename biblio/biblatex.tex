@@ -149,83 +149,6 @@ sorting=none,% настройка сортировки списка литера
     }
 }
 
-\ifnumequal{\value{mediadisplay}}{1}{
-    \DeclareSourcemap{
-        \maps{%
-            \map{% использование media=text по умолчанию
-                \step[fieldset=media, fieldvalue=text]
-            }
-        }
-    }
-}{}
-\ifnumequal{\value{mediadisplay}}{2}{
-    \DeclareSourcemap{
-        \maps{%
-            \map[overwrite]{% удаление всех записей media
-                \step[fieldset=media, null]
-            }
-        }
-    }
-}{}
-\ifnumequal{\value{mediadisplay}}{3}{
-    \DeclareSourcemap{
-        \maps{
-            \map[overwrite]{% стираем значения всех полей media=text
-                \step[fieldsource=media,match={text},final]
-                \step[fieldset=media, null]
-            }
-        }
-    }
-}{}
-\ifnumequal{\value{mediadisplay}}{4}{
-    \DeclareSourcemap{
-        \maps{
-            \map[overwrite]{% стираем значения всех полей media=eresource
-                \step[fieldsource=media,match={eresource},final]
-                \step[fieldset=media, null]
-            }
-        }
-    }
-}{}
-
-\ifpresentation
-% удаляем лишние поля в списке литературы презентации
-% их названия можно узнать в файле presentation.bbl
-\DeclareSourcemap{
-    \maps{
-    \map[overwrite,foreach={%
-        % {{{ Список лишних полей в презентации
-        address,%
-        chapter,%
-        edition,%
-        editor,%
-        eid,%
-        howpublished,%
-        institution,%
-        key,%
-        month,%
-        note,%
-        number,%
-        organization,%
-        pages,%
-        publisher,%
-        school,%
-        series,%
-        type,%
-        media,%
-        url,%
-        doi,%
-        location,%
-        volume,%
-        % Список лишних полей в презентации }}}
-    }]{
-        \perdatasource{biblio/author.bib}
-        \step[fieldset=$MAPLOOP,null]
-    }
-    }
-}
-\fi
-
 \defbibfilter{vakscopuswos}{%
     keyword=biblioauthorvak or keyword=biblioauthorscopus or keyword=biblioauthorwos
 }
@@ -511,11 +434,7 @@ sorting=none,% настройка сортировки списка литера
 % Порядок команд `\printbibliography` должен соответствовать порядку в файле common/characteristic.tex
 \newcommand*{\insertbiblioauthorgrouped}{
     \section*{\bibtitleauthor}
-    \ifsynopsis
-    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorvak,    title=\bibtitleauthorvak,resetnumbers=true] % Работы автора из списка ВАК (сброс нумерации)
-    \else
     \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorvak,    title=\bibtitleauthorvak,resetnumbers=false] % Работы автора из списка ВАК (сквозная нумерация)
-    \fi
     \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorwos,    title=\bibtitleauthorwos,resetnumbers=false]% Работы автора, индексируемые Web of Science
     \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorscopus, title=\bibtitleauthorscopus,resetnumbers=false]% Работы автора, индексируемые Scopus
     \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorpatent, title=\bibtitleauthorpatent,resetnumbers=false]% Патенты
