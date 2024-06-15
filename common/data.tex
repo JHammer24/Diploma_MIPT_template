@@ -2,7 +2,7 @@
 \newcommand{\thesisAuthorLastName}{\fixme{Фамилия}}
 \newcommand{\thesisAuthorOtherNames}{\fixme{Имя Отчество}}
 \newcommand{\thesisAuthorInitials}{\fixme{И.\,О.}}
-\newcommand{\thesisAuthor}              % Диссертация, ФИО автора
+\newcommand{\thesisAuthor}              % ВКР, ФИО автора
 {%
   \texorpdfstring{% \texorpdfstring takes two arguments and uses the first for (La)TeX and the second for pdf
     \thesisAuthorLastName~\thesisAuthorOtherNames% так будет отображаться на титульном листе или в тексте, где будет использоваться переменная
@@ -10,24 +10,27 @@
     \thesisAuthorLastName, \thesisAuthorOtherNames% эта запись для свойств pdf-файла. В таком виде, если pdf будет обработан программами для сбора библиографических сведений, будет правильно представлена фамилия.
   }
 }
-\newcommand{\thesisAuthorShort}         % Диссертация, ФИО автора инициалами
-{\thesisAuthorInitials~\thesisAuthorLastName}
-\newcommand{\thesisTitle}               % Диссертация, название
+\newcommand{\thesisTitle}               % ВКР, название
 {\fixme{Название ВКР}}
+\newcommand{\thesisForm}                % Форма ВКР: бакаларская работа, магистерская диссертация
+{\fixme{магистерская диссертация}}
 \newcommand{\thesisSpecialtyNumber}     % Специальность, номер
-{\fixme{03.03.01.}}
+{\fixme{03.04.01.}}
 \newcommand{\thesisSpecialtyTitle}      % Специальность, название
-{\fixme{Прикладные математика и физика (бакалавриат)}}
+{\fixme{Прикладные математика и физика}}
 \newcommand{\thesisProfile}             % Направленность (профиль) подготовки
 {\fixme{Авиационные технологии}}
-\newcommand{\thesisCity}                % Диссертация, город написания диссертации
+\newcommand{\thesisCity}                % Город написания ВКР
 {Жуковский}
-\newcommand{\thesisYear}                % Диссертация, год написания диссертации
+\newcommand{\thesisYear}                % Год написания ВКР
 {\fixme{2024}}
 
 \newcommand{\thesisOrganization}        % Организация
-{Федеральное государственное автономное образовательное учреждение высшего образования <<Московский физико-технический институт (национальный исследовательский университет)>>}
-\newcommand{\thesisOrganizationShort}   % Диссертация, краткое название организации
+{
+  Федеральное государственное автономное образовательное учреждение высшего образования 
+  <<Московский физико-технический институт (национальный исследовательский университет)>>
+}
+\newcommand{\thesisOrganizationShort}   % ВКР, краткое название организации
 {МФТИ}
 \newcommand{\thesisDepartment}          % Название факультета
 {Физтех-школа аэрокосмических технологий}
@@ -46,5 +49,5 @@
 {\fixme{к.\,т.\,н.}}
 
 % To avoid conflict with beamer class use \providecommand
-\providecommand{\keywords}%             % Ключевые слова для метаданных PDF диссертации и автореферата
+\providecommand{\keywords}%             % Ключевые слова для метаданных PDF ВКР
 {}
