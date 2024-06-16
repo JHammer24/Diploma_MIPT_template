@@ -1,10 +1,14 @@
 % Общие стили оформления.
 % Возможные варианты значений ищите в описании библиотеки beamer
-\usetheme{metropolis}
-%\usecolortheme{whale}
+\usetheme{Pittsburgh}
+\usecolortheme{whale}
 
 % \usetheme[secheader]{Boadilla}
 % \usecolortheme{seahorse}
+
+% Размер полей слайдов
+\setbeamersize{text margin left=1cm,%
+               text margin right=1cm}
 
 % выключение кнопок навигации
 \beamertemplatenavigationsymbolsempty
@@ -25,8 +29,7 @@
 % http://www.cpt.univ-mrs.fr/~masson/latex/Beamer-appearance-cheat-sheet.pdf
 
 % Цвет элементов
-%\setbeamercolor{footline}{fg=blue}
-\setbeamercolor{footline}{fg=black}
+\setbeamercolor{footline}{fg=blue}
 \setbeamercolor{bibliography item}{fg=black}
 \setbeamercolor{bibliography entry author}{fg=black}
 \setbeamercolor{bibliography entry title}{fg=black}
@@ -36,8 +39,11 @@
 % Названия классов элементов можно найти здесь
 % http://www.cpt.univ-mrs.fr/~masson/latex/Beamer-appearance-cheat-sheet.pdf
 
-% https://tex.stackexchange.com/a/124271/104425
+% Нумеровать список статей
+% https://tex.stackexchange.com/a/419506/104425
 \setbeamertemplate{bibliography item}{\insertbiblabel}
+% или убрать номера
+% \setbeamertemplate{bibliography item}{}
 
 % Использовать шрифт с засечками для формул
 % https://tex.stackexchange.com/a/34267/104425
@@ -54,61 +60,26 @@
 
 % footer презентации
 \setbeamertemplate{footline}{
-  \leavevmode%
-  \hbox{%
-    \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{}%
-      % И. О. Фамилия, Организация кратко
-      \thesisAuthorShort, \thesisOrganizationShort
-    \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{}%
-      % Город, 20XX
-      \thesisCity, \thesisYear
-    \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{}%
-      Стр. \insertframenumber{} из \inserttotalframenumber \hspace*{2ex}
-    \end{beamercolorbox}}%
-  \vskip0pt%
+    \leavevmode%
+    \hbox{%
+        \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{}%
+            % И. О. Фамилия, Организация кратко
+            \thesisAuthorShort, \thesisOrganizationShort
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{}%
+            % Город, 20XX
+            \thesisCity, \thesisYear
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{}%
+            Стр. \insertframenumber{} из \inserttotalframenumber \hspace*{2ex}
+        \end{beamercolorbox}}%
+    \vskip0pt%
 }
 
-%% вывод на экран заметок к презентации
+% вывод на экран заметок к презентации
 \ifnumequal{\value{presnotes}}{0}{}{
-  \setbeameroption{show notes}
-  \ifnumequal{\value{presnotes}}{2}{
-    \setbeameroption{show notes on second screen=\presposition}
-  }{}
+    \setbeameroption{show notes}
+    \ifnumequal{\value{presnotes}}{2}{
+        \setbeameroption{show notes on second screen=\presposition}
+    }{}
 }
-
-
-% прочее
-\setbeamercolor{normal text}{bg=white}
-%\setbeamercolor{frametitle}{% for printing
-%  use=normal text,
-%  parent=normal text
-%}
-
-\metroset{progressbar=frametitle, subsectionpage=none}
-
-\setbeamertemplate{itemize item}{\ensuremath{\bullet}}
-
-
-\renewcommand{\theFancyVerbLine}{%
-  \textcolor{gray}{\tiny\arabic{FancyVerbLine}}%
-}
-
-\newmintinline{cpp}{fontsize=\small}
-\newmintinline{text}{fontsize=\small}
-
-\newmint{cpp}{fontsize=\small}
-\newmint[txt]{text}{fontsize=\small}
-\newmint{console}{fontsize=\small}
-
-\newminted{cpp}{fontsize=\small, numbersep=0.2em}
-\newminted{text}{fontsize=\small, tabsize=2}
-\newminted{console}{fontsize=\small, tabsize=2}
-
-\newmintedfile{cpp}{linenos, fontsize=\small, numbersep=0.2em}
-\newmintedfile{text}{fontsize=\small, tabsize=2}
-\newmintedfile{console}{fontsize=\small, tabsize=2}
-
-\newcommand*{\code}[1]{\texttt{\small #1}}
-\newcommand*{\tcol}[1]{\begin{tabular}{@{}c@{}}#1\end{tabular}}

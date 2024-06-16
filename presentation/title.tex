@@ -1,15 +1,51 @@
-% !TEX encoding   = UTF8
-% !TEX spellcheck = ru_RU
-
-
-\title{\thesisTitle}
-
-\author{\thesisAuthor}
-
-\institute[\thesisOrganizationShort]
+\setbeamertemplate{title page}
 {
-  Научный руководитель: \supervisorRegaliaShort{} \supervisorFioShort \\[0.5em]
-  \thesisChair, \thesisDepartmentShort\;\thesisOrganizationShort, г.\:\thesisCity
+    \ifnumequal{\value{logotitle}}{1}{
+        \IfFileExists{images/logo.pdf}{
+            \begin{minipage}[c]{0.15\textwidth}
+                \begin{flushleft}
+                    \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+                \end{flushleft}
+            \end{minipage}%
+            \hfill
+            \begin{minipage}[c]{0.8\linewidth}
+                \centering
+                \usebeamerfont{institute}\insertinstitute\par
+            \end{minipage}
+        }{
+            \centering
+            \usebeamerfont{institute}\insertinstitute\par
+        }
+    }{
+        \centering
+        \usebeamerfont{institute}\insertinstitute\par
+    }
+    \centering
+    \vfill
+    \usebeamerfont{subtitle}\insertsubtitle\par
+    \bigskip
+    \usebeamerfont{title}\inserttitle\par
+    \vfill
+    \usebeamerfont{author}\insertauthor\par
+    \vfill
+    \usebeamerfont{date}\insertdate\par
 }
 
-\date{\itshape \todo{XX} июня \thesisYear\:г.}
+%\title{\small{Название презентации}}
+\title{\thesisTitle}
+\author{%
+    \texorpdfstring{%
+        \emph{Выступающий:}~\thesisAuthorShort\\%
+        \emph{Руководитель:}~\supervisorRegaliaShort~\supervisorFioShort\\%
+        %
+    }{\thesisAuthor}%
+}
+\date{\texorpdfstring{\thesisCity, \thesisYear}{}}
+\institute{\texorpdfstring{\thesisOrganization}{}}
+\IfFileExists{images/logo.pdf}{
+    \titlegraphic{\includegraphics[width=\textwidth]{images/logo}}
+    \ifnumequal{\value{logoother}}{1}{
+        \logo{\includegraphics[width=0.15\textwidth]{images/logo}}
+    }{}
+}{}
+%\subtitle{Представление на соискание учёной степени \thesisDegree\ по специальности \thesisSpecialtyNumber\ \thesisSpecialtyTitle}
