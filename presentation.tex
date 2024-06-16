@@ -2,13 +2,14 @@
 
 \newif\ifpresentation % Условие, проверяющее, что документ --- презентация
 \presentationtrue
-\documentclass[10pt, xcolor={dvipsnames, table, hyperref}]{beamer}
+\documentclass[10pt,xcolor={table,svgnames},aspectratio=169]{beamer}
 
 \input{common/setup}               % Общие настройки шаблона
 \input{common/packages}            % Пакеты общие для диссертации и автореферата
 \input{common/data}                % Основные сведения
-\input{common/fonts}               % Определение шрифтов (частичное)
+\input{common/characteristic}      % Цель, задачи, апробация
 
+\input{Presentation/fonts}         % Определение шрифтов
 \input{Presentation/setup}         % Настройки презентации
 \input{Presentation/prespackages}  % Библиотеки презентации
 \input{Presentation/styles}        % Стили презентации

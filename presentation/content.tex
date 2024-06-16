@@ -1,10 +1,4 @@
 \section{Списки}
-\begin{frame}[plain, noframenumbering]
-    \begin{center}
-        \Huge
-        Списки
-    \end{center}
-\end{frame}
 
 \subsection{Нумерованные}
 
@@ -83,14 +77,8 @@
     Продолжение предыдущего слайда
 \end{frame}
 
-\section{Графика}
-\begin{frame}[plain, noframenumbering]
-    \begin{center}
-        \Huge
-        Графика
-    \end{center}
-\end{frame}
 
+\section{Графика}
 
 \begin{frame}
     \frametitle{Одиночное изображение}
@@ -98,25 +86,16 @@
     \includegraphics[width=0.8\linewidth]{latex} % окружение figure не требуется
 \end{frame}
 
-%\begin{frame}
-%    \frametitle{Векторная графика}
-%    \begin{figure}
-%        \centering
-%        \ifdefmacro{\tikzsetnextfilename}{\tikzsetnextfilename{tikz_presentation}}{}% присваиваемое предкомпилированному pdf имя файла (не обязательно)
-%        \input{Presentation/images/tikz_plot.tikz}
-%    \end{figure}
-%\end{frame}
-
 \subsection{Расположение}
 
 \begin{frame}
     \frametitle{Изображения по-вертикали}
     \centering
     \vfill
-    \includegraphics[width=0.8\linewidth,height=0.1\textheight]{latex} \\
+    \includegraphics[width=0.5\linewidth,height=0.1\textheight]{latex} \\
     \TeX
     \vfill
-    \includegraphics[width=0.8\linewidth,height=0.2\textheight]{latex} \\
+    \includegraphics[width=0.5\linewidth,height=0.2\textheight]{latex} \\
     \LaTeX
     \vfill
     \includegraphics[scale=0.2]{latex} \\
@@ -128,12 +107,12 @@
     \frametitle{Изображения по-горизонтали}
     \begin{minipage}[t]{0.47\linewidth}
         \textbf{Составная \\ подпись 1}
-        \center{\includegraphics[width=1\linewidth]{knuth1}}
+        \center{\includegraphics[width=0.8\linewidth]{knuth1}}
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.47\linewidth}
         \textbf{Составная \\ подпись 2}
-        \center{\includegraphics[width=1\linewidth]{knuth2}}
+        \center{\includegraphics[width=0.8\linewidth]{knuth2}}
     \end{minipage}
 \end{frame}
 
@@ -154,17 +133,12 @@
     \begin{minipage}[c]{0.47\linewidth}
         \flushright
         \textbf{Составная \\ подпись 2}
-        \center{\includegraphics[width=1\linewidth]{knuth2}}
+        \center{\includegraphics[width=0.8\linewidth]{knuth2}}
     \end{minipage}
 \end{frame}
 
+
 \section{Остальное}
-\begin{frame}[plain, noframenumbering]
-    \begin{center}
-        \Huge
-        Остальное
-    \end{center}
-\end{frame}
 
 \subsection{Формулы}
 
@@ -297,9 +271,9 @@
 \begin{frame}
     \frametitle{Четыре изображения}
     \centering
-    \includegraphics[width=0.35\linewidth,angle=35]{latex}
-    \includegraphics[width=0.35\linewidth,angle=135]{latex}\\
-    \includegraphics[width=0.35\linewidth,angle=15]{latex}
-    \includegraphics[width=0.35\linewidth,angle=-15]{latex}
+    \includegraphics[width=0.25\linewidth,angle=35]{latex}
+    \includegraphics[width=0.25\linewidth,angle=135]{latex}\\
+    \includegraphics[width=0.25\linewidth,angle=15]{latex}
+    \includegraphics[width=0.25\linewidth,angle=-15]{latex}
 \end{frame}
 
