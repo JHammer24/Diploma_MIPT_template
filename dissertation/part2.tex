@@ -129,7 +129,7 @@
 \begin{itemize}
     \item единицы измерения, знак процента отделять пробелами от~числа:
           10~кВт, 15~\% (согласно ГОСТ 8.417, раздел 8);
-    \item \(\tg 20\text{\textdegree}\), но: 20~{\textdegree}C
+    \item \(\tg 20\textdegree\), но: 20~{\textdegree}C
           (согласно ГОСТ 8.417, раздел 8);
     \item знак номера, параграфа отделять от~числа: №~5, \S~8;
     \item стандартные сокращения: т.\:е., и~т.\:д., и~т.\:п.;
@@ -139,30 +139,27 @@
 \subsection{Математические знаки и символы}
 
 Русская традиция начертания греческих букв и некоторых математических
-функций отличается от~западной. Это исправляется серией \verb|\renewcommand| и использованием команд \verb|\var*| (например, \verb|\varepsilon|).
+функций отличается от~западной. Это исправляется серией \verb|\renewcommand|.
 \begin{itemize}
     % Все \original... команды заранее, ради этого примера, определены в Dissertation\userstyles.tex
     \item[До:]
-        \( \epsilon \originalge \phi \),
-        \( \rho \originalle \sigma \),
-        \( \kappa \in \originalemptyset \),
+        \( \originalepsilon \originalge \originalphi \),
+        \( \originalphi \originalle \originalepsilon \),
+        \( \originalkappa \in \originalemptyset\),
         \( \originaltan \),
         \( \originalcot \),
         \( \originalcsc \).
     \item[После:]
-        \( \varepsilon \ge \varphi \),
-        \( \varrho \le \varsigma \),
-        \( \varkappa \in \emptyset \),
+        \( \epsilon \ge \phi \),
+        \( \phi \le \epsilon \),
+        \( \kappa \in \emptyset\),
         \( \tan \),
         \( \cot \),
         \( \csc \).
 \end{itemize}
 
-%Кроме того, принято набирать греческие буквы вертикальными, что
-%решается подключением пакета \verb|upgreek| (см. закомментированный
-%блок в~\verb|userpackages.tex|) и~аналогичным переопределением в
-%преамбуле (см.~закомментированный блок в~\verb|userstyles.tex|). В
-%этом шаблоне такие переопределения уже включены.
+Кроме того, принято набирать греческие буквы вертикальными, что
+решается опцией \verb|math-style=french| пакета \verb|unicode-math|.
 
 Знаки математических операций принято переносить. Пример переноса
 в~формуле~\eqref{eq:equation3}.
