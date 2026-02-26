@@ -30,6 +30,17 @@
 
 %%% Размер полей слайдов
 %\setbeamersize{
-%  text margin left=0.0cm,
-%  text margin right=0.0cm,
+%  text margin left=1.0cm,
+%  text margin right=1.0cm,
 %}
+
+% Вывод на экран заметок к презентации
+\ifnumequal{\value{presnotes}}{0}{}{
+  \setbeameroption{show notes}
+  \ifnumequal{\value{presnotes}}{2}{
+    \setbeameroption{show notes on second screen=\presposition}
+  }{}
+}
+
+\DeclareRobustCommand{\fixme}{\textcolor{red}}  % решаем проблему превращения названия цвета в результате \MakeUppercase,
+% http://tex.stackexchange.com/a/187930, \DeclareRobustCommand protects \todo from expanding inside \MakeUppercase

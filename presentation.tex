@@ -9,7 +9,9 @@
   \ifnum\beamerMode=2
     \documentclass[draft,9pt,xcolor={table,svgnames},aspectratio=169]{beamer}
   \else
-    \documentclass[handout,9pt,xcolor={table,svgnames},aspectratio=169]{beamer}
+    \ifnum\beamerMode=3
+      \documentclass[handout,9pt,xcolor={table,svgnames},aspectratio=169]{beamer}
+    \fi
   \fi
 \fi
 
@@ -33,6 +35,10 @@
   \input{Presentation/preamble}      % Первые слайды презентации
   \input{Presentation/content}       % Содержание
   \input{Presentation/conclusion}    % Последние слайды презентации
-  \appendix
-  \input{Presentation/appendix}      % Запасные слайды презентации
+  \ifnum\beamerMode=3
+    % Не добавляем запасные слайды в распечатку
+  \else
+    \appendix
+    \input{Presentation/appendix}      % Запасные слайды презентации
+  \fi
 \end{document}
