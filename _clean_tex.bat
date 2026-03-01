@@ -23,3 +23,4 @@ del /s *.pytxcode
 del /s *.nlo
 del /s *.nls
 del /s *.ilg
+del /s *.vrb

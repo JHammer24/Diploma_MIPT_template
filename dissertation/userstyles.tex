@@ -90,7 +90,7 @@
     morestring=[d]'% 2001 Robert Denham
 }%
 
-%решаем проблему с кириллицей в комментариях (в pdflatex) https://tex.stackexchange.com/a/103712
+% решаем проблему с кириллицей в комментариях (в pdflatex) https://tex.stackexchange.com/a/103712
 \lstset{extendedchars=true,keepspaces=true,literate={Ö}{{\"O}}1
     {Ä}{{\"A}}1
     {Ü}{{\"U}}1
@@ -210,7 +210,7 @@
     xleftmargin={\lmarg},           % Чтобы весь код и полоска с номерами строк была смещена влево, так чтобы цифры не вылезали за пределы текста слева
 }
 
-%http://tex.stackexchange.com/questions/26872/smaller-frame-with-listings
+% http://tex.stackexchange.com/questions/26872/smaller-frame-with-listings
 % Окружение, чтобы листинг был компактнее обведен рамкой, если она задается, а не на всю ширину текста
 \makeatletter
 \newenvironment{SmallListing}[1][]
@@ -228,8 +228,8 @@
 
 \renewcommand{\lstlistingname}{Листинг}
 
-%Общие счётчики окружений листингов
-%http://tex.stackexchange.com/questions/145546/how-to-make-figure-and-listing-share-their-counter
+% Общие счётчики окружений листингов
+% http://tex.stackexchange.com/questions/145546/how-to-make-figure-and-listing-share-their-counter
 % Если смешивать плавающие и не плавающие окружения, то могут быть проблемы с нумерацией
 \makeatletter
 \AfterEndPreamble{% https://tex.stackexchange.com/a/252682
@@ -246,7 +246,7 @@
     \raisebox{.2ex}{+}%
 }
 
-%%%  Чересстрочное форматирование таблиц
+%%% Чересстрочное форматирование таблиц
 %% http://tex.stackexchange.com/questions/278362/apply-italic-formatting-to-every-other-row
 \newcounter{rowcnt}
 \newcommand\altshape{\ifnumodd{\value{rowcnt}}{\color{red}}{\vspace*{-1ex}\itshape}}
