@@ -12,7 +12,7 @@
     \centerfloat{
         \includegraphics[scale=0.27]{latex.png}
     }
-    \caption{TeX.}\label{fig:latex}
+    \caption{LaTeX}\label{fig:latex}
 \end{figure}
 
 Для выравнивания изображения по-центру используется команда \verb+\centerfloat+, которая является во
@@ -20,7 +20,7 @@
 
 \section{Длинное название параграфа, в котором мы узнаём как сделать две картинки с~общим номером и названием}\label{sec:ch2/sect2}
 
-А это две картинки под общим номером и названием:
+На рисунке~\cref{fig:knuth} приводятся две картинки под общим номером и названием.
 \begin{figure}[ht]
     \begin{minipage}[b][][b]{0.49\linewidth}\centering
         \includegraphics[width=0.5\linewidth]{knuth1.jpg} \\ а)
@@ -29,13 +29,12 @@
     \begin{minipage}[b][][b]{0.49\linewidth}\centering
         \includegraphics[width=0.5\linewidth]{knuth2.jpg} \\ б)
     \end{minipage}
-    \caption{Очень длинная подпись к изображению,
+    \caption{Длинная подпись к изображению,
         на котором представлены две фотографии Дональда Кнута}
     \label{fig:knuth}
 \end{figure}
 
-Те~же~две картинки под~общим номером и~названием,
-но с автоматизированной нумерацией подрисунков:
+На рисунке~\cref{fig:knuth_2} приводятся те~же~две картинки под~общим номером и~названием, но с автоматизированной нумерацией подрисунков.
 \begin{figure}[ht]
     \centerfloat{
         \hfill
@@ -58,10 +57,9 @@
 \end{figure}
 
 На рисунке~\cref{fig:knuth_2-1} показан Дональд Кнут без головного убора.
-На рисунке~\cref{fig:knuth_2}\subcaptionref*{fig:knuth_2-2}
-показан Дональд Кнут в головном уборе.
+На рисунке~\cref{fig:knuth_2-2} показан Дональд Кнут в головном уборе.
 
-\section{Пример вёрстки списков}\label{sec:ch2/sec3}
+\section{Вёрстка списков}\label{sec:ch2/sec3}
 
 \noindent Нумерованный список:
 \begin{enumerate}
@@ -78,41 +76,23 @@
 \end{itemize}
 
 \noindent Вложенные списки:
-\begin{itemize}
-    \item Имеется маркированный список.
-        \begin{enumerate}
-            \item В нём лежит нумерованный список,
-            \item в котором
-                \begin{itemize}
-                    \item лежит ещё один маркированный список.
-                \end{itemize}
-        \end{enumerate}
-\end{itemize}
-
-\noindent Нумерованные вложенные списки:
 \begin{enumerate}
-    \item Первый пункт.
-    \item Второй пункт.
+    \item Имеется
+    \item нумерованный список.
         \begin{enumerate}
-            \item в нём лежит нумерованный список,
+            \item В нём лежит ещё один нумерованный список,
             \item в котором
-                \begin{enumerate}
-                    \item ещё один нумерованный список,
-                    \item третий уровень нумерации не нормирован ГОСТ 2.105;
-                    \item обращаем внимание на строчность букв,
-                    \item в этом списке
-                        \begin{itemize}
-                            \item лежит ещё один маркированный список.
-                        \end{itemize}
-                \end{enumerate}
+            \begin{itemize}
+                \item лежит
+                \item маркированный список.
+            \end{itemize}
         \end{enumerate}
-
-    \item Четвёртый пункт.
+    \item Такие дела.
 \end{enumerate}
 
 \section{Традиции русского набора}
 
-Много полезных советов приведено в материале
+Много полезных советов по набору текста приведено в материале
 <<\href{https://kostyrka.ru/main/ru/typesetting-and-typography-crash-course-by-kostyrka/}{Краткий курс благородного набора}>>
 (автор А.\:В.~Костырка).
 Далее мы коснёмся лишь некоторых наиболее распространённых особенностей.

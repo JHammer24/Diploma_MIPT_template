@@ -77,57 +77,6 @@
             \displaystyle\frac{1}{\sqrt{2}+\cdots}}}
 \]
 
-В формулах можно использовать греческие буквы:
-\[
-  \alpha\beta\gamma\delta\epsilon\zeta\eta\theta%
-  \iota\kappa\lambda\mu\nu\xi\pi\rho%
-  \sigma\tau\upsilon\phi\chi\psi\omega\Gamma\Delta%
-  \Theta\Lambda\Xi\Pi\Sigma\Upsilon\Phi\Psi\Omega.
-\]
-
-Для жирного начертания символов в формулах используется команда \verb|\symbf|, для курсива --- \verb|\symit|:
-\[%https://texfaq.org/FAQ-boldgreek
-  \symbf{
-    \alpha\beta\gamma\delta\epsilon\zeta\eta\theta%
-    \iota\kappa\lambda\mu\nu\xi\pi\rho%
-    \sigma\tau\upsilon\phi\chi\psi\omega\Gamma\Delta%
-    \Theta\Lambda\Xi\Pi\Sigma\Upsilon\Phi\Psi\Omega
-  },
-\]
-\[
-  \symit{
-    \alpha\beta\gamma\delta\epsilon\zeta\eta\theta%
-    \iota\kappa\lambda\mu\nu\xi\pi\rho%
-    \sigma\tau\upsilon\phi\chi\psi\omega\Gamma\Delta%
-    \Theta\Lambda\Xi\Pi\Sigma\Upsilon\Phi\Psi\Omega
-  }.
-\]
-
-\subsection{Прямое и наклонное начертание символов}
-
-За прямое и наклонное начертание в пакете \verb|unicode-math| отвечает опция \verb|math-style|.
-Значение \verb|math-style=french| даёт следующий результат для латинских и греческих букв:
-\begin{enumerate}
-  \item Латинские буквы
-  \begin{itemize}
-    \item курсив для строчных букв: \(xyz\), прямое начертание для заглавных: \(XYZ\);
-    \item жирный шрифт даёт прямое начертание как строчных, так и заглавных букв: \(\symbf{xyz}\), \(\symbf{XYZ}\);
-  \end{itemize}
-  \item Греческие буквы
-  \begin{itemize}
-    \item прямое начертание обычным шрифтом: \(\phi\psi\omega\), \(\Phi\Psi\Omega\);
-    \item прямое начертание жирным шрифтом: \(\symbf{\phi\psi\omega}\), \(\symbf{\Phi\Psi\Omega}\).
-  \end{itemize}
-\end{enumerate}
-
-Для непосредственного управления шрифтом в формулах можно использовать команды \verb|\sym*|:
-\begin{itemize}
-  \item \verb|\symup| --- прямое начертание: \(\symup{xyz}\), \(\symup{\phi\psi\omega}\);
-  \item \verb|\symbfup| --- жирное прямое начертание: \(\symbfup{xyz}\), \(\symbfup{\phi\psi\omega}\);
-  \item \verb|\symit| --- курсив: \(\symit{xyz}\), \(\symit{\phi\psi\omega}\);
-  \item \verb|\symbfit| --- жирный курсив: \(\symbfit{xyz}\), \(\symbfit{\phi\psi\omega}\).
-\end{itemize}
-
 \subsection{Ненумерованные многострочные формулы}\label{subsec:ch1/sec3/sub2}
 
 Вот так можно написать две формулы, не нумеруя их, чтобы знаки <<равно>> были
@@ -204,13 +153,6 @@
     \backslash \mbox{qquad} & \quad f(x) = x^2\qquad +3x\qquad +2
 \end{align*}
 
-Можно использовать разные математические алфавиты:
-\begin{align}
-    \mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \nonumber  \\
-    \mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \nonumber \\
-    \mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \nonumber
-\end{align}
-
 Посмотрим на систему уравнений на примере аттрактора Лоренца:
 
 \[
@@ -281,9 +223,67 @@
     \end{align}
 \end{subequations}
 
+\subsection{Форматирование букв}
+
+В формулах можно использовать разные математические алфавиты:
+\begin{align}
+    \mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \nonumber  \\
+    \mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \nonumber \\
+    \mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \nonumber
+\end{align}
+
+В формулах можно использовать греческие буквы:
+\[
+    \alpha\beta\gamma\delta\epsilon\zeta\eta\theta%
+    \iota\kappa\lambda\mu\nu\xi\pi\rho%
+    \sigma\tau\upsilon\phi\chi\psi\omega\Gamma\Delta%
+    \Theta\Lambda\Xi\Pi\Sigma\Upsilon\Phi\Psi\Omega.
+\]
+
+Для жирного начертания символов в формулах используется команда \verb|\symbf|, для курсива --- \verb|\symit|:
+\[%https://texfaq.org/FAQ-boldgreek
+\symbf{
+    \alpha\beta\gamma\delta\epsilon\zeta\eta\theta%
+    \iota\kappa\lambda\mu\nu\xi\pi\rho%
+    \sigma\tau\upsilon\phi\chi\psi\omega\Gamma\Delta%
+    \Theta\Lambda\Xi\Pi\Sigma\Upsilon\Phi\Psi\Omega
+},
+\]
+\[
+\symit{
+    \alpha\beta\gamma\delta\epsilon\zeta\eta\theta%
+    \iota\kappa\lambda\mu\nu\xi\pi\rho%
+    \sigma\tau\upsilon\phi\chi\psi\omega\Gamma\Delta%
+    \Theta\Lambda\Xi\Pi\Sigma\Upsilon\Phi\Psi\Omega
+}.
+\]
+
+За прямое и наклонное начертание в пакете \verb|unicode-math| отвечает опция \verb|math-style|.
+Значение \verb|math-style=french| даёт следующий результат для латинских и греческих букв:
+\begin{enumerate}
+    \item Латинские буквы
+    \begin{itemize}
+        \item курсив для строчных букв: \(xyz\), прямое начертание для заглавных: \(XYZ\);
+        \item жирный шрифт даёт прямое начертание как строчных, так и заглавных букв: \(\symbf{xyz}\), \(\symbf{XYZ}\);
+    \end{itemize}
+    \item Греческие буквы
+    \begin{itemize}
+        \item прямое начертание обычным шрифтом: \(\phi\psi\omega\), \(\Phi\Psi\Omega\);
+        \item прямое начертание жирным шрифтом: \(\symbf{\phi\psi\omega}\), \(\symbf{\Phi\Psi\Omega}\).
+    \end{itemize}
+\end{enumerate}
+
+Для непосредственного управления шрифтом в формулах можно использовать команды \verb|\sym*|:
+\begin{itemize}
+    \item \verb|\symup| --- прямое начертание: \(\symup{xyz}\), \(\symup{\phi\psi\omega}\);
+    \item \verb|\symbfup| --- жирное прямое начертание: \(\symbfup{xyz}\), \(\symbfup{\phi\psi\omega}\);
+    \item \verb|\symit| --- курсив: \(\symit{xyz}\), \(\symit{\phi\psi\omega}\);
+    \item \verb|\symbfit| --- жирный курсив: \(\symbfit{xyz}\), \(\symbfit{\phi\psi\omega}\).
+\end{itemize}
+
 \subsection{Форматирование чисел}\label{sec:units}
 
-Числа форматируются при помощи команды \verb|\num|:
+Числа можно форматировать при помощи команды \verb|\num|:
 \num{5.3};
 \num{2.3e8};
 \num{12345,67890};
